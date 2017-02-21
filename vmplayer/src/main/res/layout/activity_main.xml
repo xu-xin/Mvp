@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:paddingBottom="15dp"
+        android:paddingTop="30dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="VMPlayer"
+                android:textColor="#fff"
+                android:textSize="20sp"/>
+
+            <ImageView
+                android:id="@+id/main_iv_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/icon_seeting"/>
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+    <FrameLayout
+        android:id="@+id/main_fl"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+    <com.roughike.bottombar.BottomBar
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="65dp"
+        android:background="@color/colorPrimary"
+        app:bb_activeTabColor="@android:color/white"
+        app:bb_inActiveTabAlpha="0.3"
+        app:bb_behavior="underNavbar"
+        app:bb_inActiveTabColor="@android:color/white"
+        app:bb_tabXmlResource="@xml/bottombar_tabs" >
+
+    </com.roughike.bottombar.BottomBar>
+</RelativeLayout>
